@@ -4,8 +4,38 @@
 # generated files
 output/**
 *.npy
-input/** 
+input/**
 *.csv
+
+# Additional data formats
+*.h5
+*.hdf5
+*.parquet
+
+# API keys and secrets
+secrets.json
+config.json
+*.key
+*.pem
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Model files
+*.pkl
+*.pickle
+*.joblib
+*.model
 
 
 # Byte-compiled / optimized / DLL files
