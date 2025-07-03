@@ -23,7 +23,7 @@ print("reading *.npy files...")
 df = pd.read_csv(csv_filename, nrows=nrows)
 flat_embeddings = []
 for row_start in tqdm.tqdm(range(0, nrows, chunksize)):
-    embeddings_filename = f"output/embedded_dbpedia_1M_{row_start}_{chunksize}.npy"
+    embeddings_filename = f"output/embedded_dbpedia_1M_dim_{embedding_dimension}_{row_start}_{chunksize}.npy"
     if os.path.exists(embeddings_filename):
         with open(embeddings_filename, "rb") as f:
             embeddings = np.load(f)
@@ -46,4 +46,6 @@ df = pd.DataFrame(
 print("publishing dataset")
 dataset = Dataset.from_pandas(df)
 print("publishing dataset")
-dataset.push_to_hub("filipecosta90/dbpedia-openai-1M-text-embedding-3-large-3072d")
+dataset.push_to_hub(
+    f"filipecosta90/dbpedia-openai-1M-text-embedding-3-large-{embedding_dimension}d"
+)

@@ -6,7 +6,7 @@ if not os.path.exists("input"):
     os.makedirs("input")
 
 csv_filename = "input/dbpedia_1M.csv"
-dbpedia_dataset = load_dataset("BeIR/dbpedia-entity", "corpus", trust_remote_code=True)
+dbpedia_dataset = load_dataset("BeIR/dbpedia-entity", "corpus")
 print("finished downloading the dataset")
 
 _id = dbpedia_dataset["corpus"]["_id"][:1_000_000]
