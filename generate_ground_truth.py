@@ -7,6 +7,7 @@ import numpy as np
 from datasets import load_dataset
 from sklearn.neighbors import NearestNeighbors
 from sklearn.model_selection import train_test_split
+import h5py
 
 
 def generate_ground_truth_cosine(
@@ -67,6 +68,16 @@ def save_ground_truth(ground_truth, output_file):
     print(f"Ground truth saved to {output_file}_*.npy files")
 
 
+def save_h5py(ground_truth, output_file):
+    with h5py.File(f"{output_file}.h5", "w") as f:
+        f.create_dataset("train", data=ground_truth["train_embeddings"])
+        f.create_dataset("test", data=ground_truth["test_embeddings"])
+        f.create_dataset("neighbors", data=ground_truth["neighbors"])
+        f.create_dataset("distances", data=ground_truth["distances"])
+
+    print(f"Ground truth saved to {output_file}.h5 file")
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Generate ground truth for cosine similarity on DBpedia embeddings"
@@ -121,6 +132,7 @@ def main():
 
     # Save results
     save_ground_truth(ground_truth, args.output)
+    save_h5py(ground_truth, args.output)
 
     print("Ground truth generation completed!")
 

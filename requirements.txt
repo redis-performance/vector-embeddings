@@ -23,3 +23,6 @@ scipy>=1.7.0
 
 # System and process utilities
 psutil>=5.8.0
+
+# HDF5 file format support
+h5py>=3.14.0
