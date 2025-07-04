@@ -69,13 +69,13 @@ def save_ground_truth(ground_truth, output_file):
 
 
 def save_h5py(ground_truth, output_file):
-    with h5py.File(f"{output_file}.h5", "w") as f:
+    with h5py.File(f"{output_file}.hdf5", "w") as f:
         f.create_dataset("train", data=ground_truth["train_embeddings"])
         f.create_dataset("test", data=ground_truth["test_embeddings"])
         f.create_dataset("neighbors", data=ground_truth["neighbors"])
         f.create_dataset("distances", data=ground_truth["distances"])
 
-    print(f"Ground truth saved to {output_file}.h5 file")
+    print(f"Ground truth saved to {output_file}.hdf5 file")
 
 
 def main():
