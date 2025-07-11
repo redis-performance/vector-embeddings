@@ -13,4 +13,8 @@ This repository provides a complete pipeline for generating DBpedia text embeddi
 
 | Dataset link                                                                                                                                                                                 | Embedding model        | Embedding Dimensions | N Vectors |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | -------------------- | --------- |
+| [dbpedia-openai-1M-text-embedding-3-large-512d](https://huggingface.co/datasets/filipecosta90/dbpedia-openai-1M-text-embedding-3-large-512d) | text-embedding-3-large | 512                 | 1M   |
+| [dbpedia-openai-1M-text-embedding-3-large-1024d](https://huggingface.co/datasets/filipecosta90/dbpedia-openai-1M-text-embedding-3-large-1024d) | text-embedding-3-large | 1024                 | 1M   |
+| [dbpedia-openai-1M-text-embedding-3-large-1536d](https://huggingface.co/datasets/filipecosta90/dbpedia-openai-1M-text-embedding-3-large-1536d) | text-embedding-3-large | 1536                 | 1M   |
+| [dbpedia-openai-1M-text-embedding-3-large-2048d](https://huggingface.co/datasets/filipecosta90/dbpedia-openai-1M-text-embedding-3-large-2048d) | text-embedding-3-large | 2048                 | 1M   |
 | [dbpedia-openai-1M-text-embedding-3-large-3072d](https://huggingface.co/datasets/filipecosta90/dbpedia-openai-1M-text-embedding-3-large-3072d) | text-embedding-3-large | 3072                 | 1M   |
