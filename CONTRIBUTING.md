@@ -53,7 +53,7 @@ python generate_ground_truth.py \
 
 Types: `feat`, `fix`, `refactor`, `test`, `docs`, `chore`
 
-Example: `feat/add-pipeline-mode`
+Example: `feat/add-cohere-embeddings`
 
 ## Coding standards
 
