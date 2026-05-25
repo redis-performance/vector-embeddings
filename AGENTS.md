@@ -55,7 +55,7 @@ python generate_ground_truth.py \
 
 ## Branch naming
 
-Same as human contributors: `<type>/<short-description>` (e.g. `fix/off-by-one-in-pipeline`).
+Same as human contributors: `<type>/<short-description>` (e.g. `feat/add-cohere-embeddings`).
 
 ## Coding standards
 
